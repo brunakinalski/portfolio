@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruna Kinalski Lima</title>
+    <style>
+        body {
+            margin: 0; 
+        }
+
+        .container {
+            display: grid; /* Define o container como uma grid para organizar o layout */
+        }
+
+        header {
+            grid-column-start: 1;
+            grid-column-end: 12; 
+            background-color: #000000; 
+        }
+
+        .menu {
+            grid-column-start: 6;
+            grid-column-end: 12; 
+            justify-content: center;
+            gap: 20px; 
+        }
+
+        .imagem_perfil {
+            grid-column-start: 1; 
+            grid-column-end: 3; 
+        }
+
+        .imagem_perfil img {
+            width: 100%; /* Ajusta a largura da imagem para o container */
+            height: auto; /* Mantém a proporção da imagem */
+            max-width: 300px; /* Define um tamanho máximo para a imagem */
+            display: block; 
+            border-radius: 50%; 
+            opacity: 0.8;
+            border: #000000 dotted; 
+        }
+
+        .imagem_perfil img:hover {
+            opacity: 0.5; 
+            border: #333 solid; 
+        }
+
+        .principal {
+            grid-column-start: 4; 
+            grid-column-end: 12;
+            padding-left: 15px; 
+            padding-right: 15px;
+            text-align: justify; 
+        }
+
+        footer {
+            grid-column-start: 1; 
+            grid-column-end: 12; 
+            background-color: #000000; 
+            color: rgb(255, 255, 255); 
+            text-align: center;
+            padding: 20px;
+            position: relative; 
+            bottom: 0; /* Posiciona o footer no fundo */
+            width: 100%; /* Faz o footer ocupar toda a largura */
+        }
+
+        ul {
+            list-style-type: none; /* Remove os marcadores da lista */
+            color: #000000;
+        }
+
+        a,
+        a:link {
+            text-decoration: none; /* Remove o sublinhado dos links */
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+            font-size: large; 
+            font-weight: bold; 
+            color: black; 
+            padding: 9px 20px; /* Espaçamento interno dos links */
+            border: thick double black; 
+        }
+
+        .font {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+            margin-left: 20px; 
+        }
+
+        li {
+            float: left; 
+        }
+
+        .img {
+            border: 1px solid #ccc; /* Borda dos cartões de imagem */
+            border-radius: 1rem; /* Bordas arredondadas */
+            padding: 0.8rem;
+            margin-bottom: 0.8rem; 
+        }
+
+        .img img {
+            width: 245px; 
+            height: 300px;
+        }
+
+        .card {
+            display: flex; /* Usa flexbox para organizar os cartões dos pets */
+            flex-flow: row wrap; /* Permite que os cartões de pets se movam para a linha seguinte */
+        }
+
+        .colorcard {
+            color: white; 
+            background-color: gray; 
+        }
+
+        .colorcard:hover {
+            opacity: 0.5; /* Opacidade dos cartões ao passar o mouse */
+        }
+
+        a:hover {
+            background-color: #424242;
+            color: white; 
+        }
+
+        /* media query para dispositivos móveis */
+        @media only screen and (max-width: 767px) {
+            .wrapper {
+                grid-column-start: 1; /* Faz o conteúdo da wrapper ocupar toda a largura */
+                grid-column-end: 1; 
+            }
+
+            .imagem_perfil {
+                grid-column-start: 1; /* Faz a imagem ocupar toda a largura*/
+                grid-column-end: 1; 
+            }
+
+            .principal {
+                grid-column-start: 1; /* Faz o conteúdo principal ocupar toda a largura  */
+                grid-column-end: 1; 
+            }
+
+            .menu {
+                grid-column-start: 1; /* Faz o menu ocupar toda a largura  */
+                grid-column-end: 12; 
+                text-align: center;
+                display: flex; /* Usa flexbox para o menu */
+                flex-direction: column; /* Organiza os itens do menu em coluna */
+                gap: 10px; /* Espaçamento entre os itens do menu */
+            }
+
+            .menu ul {
+                padding: 0; /* Remove o padding da lista do menu */
+            }
+
+            .menu li {
+                float: none; /* Remove o float dos itens da lista em dispositivos móveis */
+            }
+
+            .menu a {
+                display: block; 
+                padding: 15px 0; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container">
+        <h1 style="color: rgb(255, 255, 255); text-align: center;"></h1>
+        <br> 
+    </header>
+    <nav class="container menu">
+        <ul>
+            <li><a href="index.html">Sobre Mim</a></li>
+            <li><a href="profissional.html">Profissional</a></li> 
+            <li><a href="educacional.html">Educacional</a></li> 
+            <li><a href="pets.html">Cuteness</a></li> 
+            <li><a href="contato.html">Contato</a></li> 
+        </ul>
+    </nav>
+    <div class="container wrapper">
+        <aside class="imagem_perfil">
+            <img src="imagens/newgirlcat.png" alt="Perfil">
+            <div class="font">
+                <p><strong>Profissão:</strong> Back-End Developer</p>
+                <p><strong>Idade:</strong> 27 anos</p> 
+                <p><strong>Nascimento:</strong> 17/07/1997</p> 
+                <p><strong>Curso:</strong> Engenharia de Software</p> 
+            </div>
+        </aside>
+        <section class="principal font">
+            <h1>Meus Pets</h1> 
+            <div class="card">
+                <div class="img colorcard">
+                    <img src="imagens/floc.jpg" alt="Flocos"> 
+                    <div class="">
+                        <h2>Flocos</h2>
+                    </div>
+                </div>
+
+                <div class="img colorcard">
+                    <img src="imagens/shad.png" alt="Shadow"> 
+                    <div class="">
+                        <h2>Shadow</h2>
+                    </div>
+                </div>
+                <div class="img colorcard">
+                    <img src="imagens/pi.png" alt="Pirata">
+                    <div class="">
+                        <h2>Pirata</h2>
+                    </div>
+                </div>
+                <div class="img colorcard">
+                    <img src="imagens/na.png" alt="Nagato">
+                    <div class="">
+                        <h2>Nagato</h2>
+                    </div>
+                </div>
+                <div class="img colorcard">
+                    <img src="imagens/jo.png" alt="Jorel"> 
+                    <div class="">
+                        <h2>Jorel</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <br><br><br><br><br><br><br><br> 
+    <br><br><br>
+    <footer class="container">
+        <h1>Obrigada pela Visita!</h1> 
+    </footer>
+</body>
+
+</html>

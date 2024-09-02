@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruna Kinalski Lima</title>
+    <style>
+        body {
+            margin: 0; 
+        }
+
+        .container {
+            display: grid; 
+        }
+
+        header {
+            grid-column-start: 1; 
+            grid-column-end: 12; 
+            background-color: #000000;
+        }
+
+        .menu {
+            grid-column-start: 6;
+            grid-column-end: 12; 
+            justify-content: center; 
+            gap: 20px; 
+        }
+
+        .imagem_perfil {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .imagem_perfil img {
+            width: 100%; /* Ajusta a largura da imagem para o container */
+            height: auto; /* Mantém a proporção da imagem */
+            max-width: 300px; /* Define um tamanho máximo para a imagem */
+            display: block;
+            border-radius: 50%; 
+            opacity: 0.8; 
+            border: #000000 dotted; 
+        }
+
+        .imagem_perfil img:hover {
+            opacity: 0.5;
+            border: #333 solid; 
+        }
+
+        .principal {
+            grid-column-start: 4; 
+            grid-column-end: 12; 
+            padding-left: 15px;
+            padding-right: 15px;
+            text-align: justify; 
+        }
+
+        footer {
+            grid-column-start: 1;
+            grid-column-end: 12; 
+            background-color: #000000; 
+            color: rgb(255, 255, 255); 
+            text-align: center; 
+            padding: 20px; /* Espaçamento interno do footer */
+            position: relative; 
+            bottom: 0; /* Posiciona o footer no fundo */
+            width: 100%; /* Faz o footer ocupar toda a largura */
+        }
+
+        ul {
+            list-style-type: none; /* Remove os marcadores da lista */
+            color: #000000;
+        }
+
+        a,
+        a:link {
+            text-decoration: none; /* Remove o sublinhado dos links */
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: large; 
+            font-weight: bold; 
+            color: black; 
+            padding: 9px 20px; /* Espaçamento interno dos links */
+            border: thick double black;
+        }
+
+        .font {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+            margin-left: 20px; 
+        }
+
+        li {
+            float: left; 
+        }
+
+        a:hover {
+            background-color: #424242; 
+            color: white; 
+        }
+
+        .skills-section {
+            display: flex; /* Usa flexbox para organizar os cartões de habilidades */
+            flex-wrap: wrap; /* Permite que os cartões se movam para a linha seguinte */
+            gap: 20px; /* Espaçamento entre os cartões */
+            margin-top: 20px;
+        }
+
+        .skill-card {
+            background-color: #ffffff; 
+            border: 2px solid #ddd;
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ao redor dos cartões */
+            padding: 20px; /* Espaçamento interno dos cartões */
+            width: calc(25% - 30px); /* Largura dos cartões com ajuste para o gap */
+            text-align: center; /* Centraliza o texto dentro dos cartões */
+        }
+
+        .skill-card img {
+            width: 50px; /* Largura das imagens dentro dos cartões */
+            height: 50px; /* Altura das imagens dentro dos cartões */
+            margin-bottom: 10px; /* Margem abaixo das imagens */
+        }
+
+        .skill-card h3 {
+            margin: 0; /* Remove a margem do título dos cartões */
+            color: #333; 
+        }
+
+        .skill-card p {
+            color: #666; 
+        }
+
+        /* media query para dispositivos móveis */
+        @media only screen and (max-width: 767px) {
+            .wrapper {
+                grid-column-start: 1; /* Faz o conteúdo da wrapper ocupar toda a largura  */
+                grid-column-end: 1;
+            }
+
+            .imagem_perfil {
+                grid-column-start: 1; /* Faz a imagem ocupar toda a largura  */
+                grid-column-end: 1; 
+            }
+
+            .principal {
+                grid-column-start: 1; /* Faz o conteúdo principal ocupar toda a largura  */
+                grid-column-end: 1; 
+            }
+
+            .container {
+                grid-template-columns: 1fr; /* Define uma única coluna para o container em dispositivos móveis */
+            }
+
+            .skill-card {
+                width: calc(100% - 20px); /* Largura dos cartões ajustada para se adaptar a dispositivos móveis */
+            }
+
+            .menu {
+                grid-column-start: 1; /* Faz o menu ocupar toda a largura em dispositivos móveis */
+                grid-column-end: 12; 
+                text-align: center; /* Centraliza o texto do menu */
+                display: flex; /* Usa flexbox para o menu */
+                flex-direction: column; /* Organiza os itens do menu em coluna */
+                gap: 10px; 
+            }
+
+            .menu ul {
+                padding: 0; /* Remove o padding da lista do menu */
+            }
+
+            .menu li {
+                float: none; /* Remove o float dos itens da lista  */
+            }
+
+            .menu a {
+                display: block; 
+                padding: 15px 0; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container">
+        <h1 style="color: rgb(255, 255, 255); text-align: center;"></h1> 
+        <br> 
+    </header>
+    <nav class="container menu">
+        <ul>
+            <li><a href="index.html">Sobre Mim</a></li>
+            <li><a href="profissional.html">Profissional</a></li>
+            <li><a href="educacional.html">Educacional</a></li>
+            <li><a href="pets.html">Cuteness</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    <div class="container wrapper">
+        <aside class="imagem_perfil">
+            <img src="imagens/jobgirl2.png">
+            <div class="font">
+                <p><strong> Profissão: </strong> Back-End Developer</p>
+                <p><strong> Idade: </strong> 27 anos</p>
+                <p><strong>Nascimento: </strong> 17/07/1997</p>
+                <p><strong>Curso: </strong> Engenharia de Software</p>
+            </div>
+        </aside>
+        <section class="principal font">
+            <h1>Bem-Vindo(a) ao meu Portfólio!</h1> 
+            <h4>EXPERIÊNCIA PROFISSIONAL E PRINCIPAIS HABILIDADES:</h4> 
+            <p><strong>Empresa: </strong> Mérito Engenharia de Software</p>
+            <p><strong>Admissão:</strong> Junho/2023</p>
+            <p><strong>Cargo:</strong> Backend Developer</p> 
+            <p><strong>Principais Habilidades:</strong> 1 ano de experiência em Java, PostgreSQL, Web Service - REST, Protocolo Http, JasperReports. <br> Desenvolvimento e manutenção de aplicações desktop, estruturação de consultas, criação de tabelas em BD e desenvolvimento de relatórios e integração com APIs.</p> 
+      
+            <div class="skills-section">
+                <div class="skill-card">
+                    <img src="imagens/java.png" alt="Java">
+                    <h3>Java</h3>
+                    <p>Desenvolvimento de aplicações robustas e escaláveis em Java, com foco em orientação a objetos e boas práticas de programação.</p> 
+                </div>
+                <div class="skill-card">
+                    <img src="imagens/postgresql.png" alt="SQL">
+                    <h3>PostgreSQL</h3>
+                    <p>Modelagem, otimização e gerenciamento de bancos de dados relacionais com PostgreSQL, garantindo alta performance e integridade dos dados.</p> 
+                </div>
+                <div class="skill-card">
+                    <img src="imagens/lamp.png" alt="Metodologias Ágeis"> 
+                    <h3>Metodologias Ágeis</h3>
+                    <p>Experiência prática em Metodologias Ágeis, aplicando frameworks como Scrum e Kanban.</p> 
+                </div>
+                <div class="skill-card">
+                    <img src="imagens/eng.png" alt="APIs RESTful"> 
+                    <h3>APIs RESTful</h3>
+                    <p>Integração de APIs RESTful, garantindo comunicação eficiente entre sistemas e serviços Web.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="imagens/report.png" alt="JasperReports"> 
+                    <h3>JasperReports</h3>
+                    <p>Criação e personalização de relatórios dinâmicos, transformando dados em insights visuais para suportar a tomada de decisões.</p> 
+                </div>
+                
+              
+            </div>
+            <br> 
+            <br>
+            <br>
+        </section>
+    </div>
+    <footer class="container">
+        <h1>  Obrigada pela Visita! </h1> 
+    </footer>
+    
+</body>
+
+</html>

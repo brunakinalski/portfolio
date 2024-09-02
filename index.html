@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruna Kinalski Lima</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            display: grid; /* Usa grid layout para o container principal */
+        }
+
+        header {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: #000000; 
+        }
+
+        .menu {
+            grid-column-start: 6; 
+            grid-column-end: 12; 
+            justify-content: center;
+            gap: 20px; 
+        }
+
+        .imagem_perfil {
+            grid-column-start: 1; 
+            grid-column-end: 3; 
+        }
+
+        .imagem_perfil img {
+            width: 100%; /* Ajusta a largura da imagem para o container */
+            height: auto; /* Mantém a proporção da imagem */
+            max-width: 300px; /* Define um tamanho máximo para a imagem */
+            display: block; /* Remove espaçamentos extras abaixo da imagem */
+            border-radius: 50%; 
+            opacity: 0.8; 
+            border: #000000 dotted;
+        }
+
+        .imagem_perfil img:hover {
+            opacity: 0.5; 
+            border: #333 solid;
+        }
+
+        .principal {
+            grid-column-start: 4; 
+            grid-column-end: 12;
+            padding-left: 15px; /* Espaçamento interno à esquerda */
+            padding-right: 15px; /* Espaçamento interno à direita */
+            text-align: justify;
+        }
+
+        footer {
+            grid-column-start: 1; 
+            grid-column-end: 12; 
+            background-color: #000000;
+            color: rgb(255, 255, 255); 
+            text-align: center;
+            padding: 20px; 
+            position: relative; /* Posiciona o footer relativamente */
+            bottom: 0; /* Alinha o footer na parte inferior */
+            width: 100%; /* Largura total do container */
+        }
+
+        ul {
+            list-style-type: none; /* Remove marcadores da lista */
+            color: #000000;
+        }
+
+        a,
+        a:link {
+            text-decoration: none; /* Remove sublinhado dos links */
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: large; 
+            font-weight: bold; 
+            color: black; 
+            padding: 9px 20px; /* Espaçamento interno dos links */
+            border: thick double black; 
+        }
+
+        .font {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+            margin-left: 20px;
+        }
+
+        li {
+            float: left; /* Alinha os itens da lista à esquerda */
+        }
+
+        a:hover {
+            background-color: #424242; 
+            color: white; 
+        }
+
+        /* Media query para dispositivos móveis */
+        @media only screen and (max-width: 767px) {
+            .wrapper {
+                grid-column-start: 1;
+                grid-column-end: 1; 
+            }
+
+            .imagem_perfil {
+                grid-column-start: 1; 
+                grid-column-end: 1; 
+            }
+
+            .principal {
+                grid-column-start: 1; 
+                grid-column-end: 1; 
+            }
+
+            .menu {
+                grid-column-start: 1; /* Ajusta a coluna inicial para dispositivos móveis */
+                grid-column-end: 12; /* Ajusta a coluna final para dispositivos móveis */
+                text-align: center; /* Alinha o texto ao centro */
+                display: flex; /* Usa flexbox para o menu */
+                flex-direction: column; /* Alinha os itens em coluna */
+                gap: 10px; /* Espaço entre itens do menu */
+            }
+
+            .menu ul {
+                padding: 0; /* Remove padding da lista */
+            }
+
+            .menu li {
+                float: none; /* Remove o float para dispositivos móveis */
+            }
+
+            .menu a {
+                display: block; /* Faz com que os links ocupem a largura completa */
+                padding: 15px 0; /* Ajusta o padding dos links */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container">
+        <h1 style="color: rgb(255, 255, 255); text-align: center;"></h1>
+        <br> 
+    </header>
+    <nav class="container menu">
+        <ul>
+            <li><a href="index.html">Sobre Mim</a></li>
+            <li><a href="profissional.html">Profissional</a></li>
+            <li><a href="educacional.html">Educacional</a></li>
+            <li><a href="pets.html">Cuteness</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    <div class="container wrapper">
+        <aside class="imagem_perfil">
+            <img src="imagens/earphonegirl.png" alt="Imagem de perfil">
+            <div class="font">
+                <p><strong> Nome: </strong> Bruna Kinalski Lima</p>
+                <p><strong> Profissão: </strong> Back-End Developer</p>
+                <p><strong> Idade: </strong> 27 anos</p>
+                <p><strong>Nascimento: </strong> 17/07/1997</p>
+                <p><strong>Curso: </strong> Engenharia de Software</p>
+            </div>
+        </aside>
+        <section class="principal font">
+            <h1>Saudações!</h1>
+            <p>Me chamo Bruna, sou estudante do Bacharelado em Engenharia de Software pela Uninter! Atualmente estou no terceiro semestre. Minha trajetória no mundo da tecnologia começou em 2023, movida pela curiosidade em entender o funcionamento das linguagens de programação e o vasto universo por trás delas. Atualmente, atuo como Backend Developer, aplicando minhas habilidades principalmente em Java. Se você quiser saber mais sobre minha experiência profissional, visite a seção <strong>"Profissional"</strong> no menu principal para ter acesso ao meu Portfólio.</p>
+            <p>Minha formação acadêmica tem sido uma jornada enriquecedora e desafiadora. Ao longo dos semestres, tenho mergulhado em conceitos complexos e ferramentas essenciais para o desenvolvimento de software, o que tem me proporcionado uma sólida base teórica e prática. A experiência adquirida até agora tem sido fundamental para aprimorar minhas habilidades técnicas e meu pensamento crítico, preparando-me para enfrentar os desafios do mercado de tecnologia com confiança. Para conhecer melhor minhas habilidades e formação acadêmica visite a seção <strong>"Educacional"</strong> no menu principal.</p>
+            <p>Além da minha carreira e estudos, sou uma grande amante de gatos e cachorros. A presença desses animais em minha vida traz uma alegria e uma energia única, transformando momentos de estresse em momentos de leveza. A companhia constante e afetuosa dos meus pets não só alivia as tensões do dia a dia, mas também contribui para meu bem-estar emocional e psicológico. Eles são minha âncora de estabilidade, lembrando-me da importância de encontrar alegria nas pequenas coisas da vida. Para conhecer mais sobre meus animais de estimação, acesse o menu <strong>"Cuteness"</strong>.</p>
+            <p>Se você compartilha interesses semelhantes ou está interessado em colaborar em projetos, adoraria me conectar contigo! Deixe teu contato acessando a seção <strong>"Contato"</strong> no menu principal.</p>
+            <p>Agradeço por visitar minha página e por se interessar pela minha trajetória profissional e pessoal!</p>
+        </section>
+        <br><br><br><br><br><br><br><br><br><br><br> 
+        <footer class="container">
+            <h1>Obrigada pela Visita!</h1>
+        </footer>
+    </div>
+</body>
+
+</html>

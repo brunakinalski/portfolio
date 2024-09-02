@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruna Kinalski Lima</title>
+    <style>
+        body {
+            margin: 0; 
+        }
+
+        .container {
+            display: grid; 
+        }
+
+        header {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: #000000; 
+        }
+
+        .menu {
+            grid-column-start: 6;
+            grid-column-end: 12;
+            justify-content: center;
+            gap: 20px; /* Espaçamento entre os itens do menu */
+        }
+
+        .imagem_perfil {
+            grid-column-start: 1;
+            grid-column-end: 3; 
+        }
+
+        .imagem_perfil img {
+            width: 100%; /* Ajusta a largura da imagem para o container */
+            height: auto; /* Mantém a proporção da imagem */
+            max-width: 300px; /* Define um tamanho máximo para a imagem */
+            display: block;
+            border-radius: 50%; 
+            opacity: 0.8; 
+            border: #000000 dotted;
+        }
+
+        .imagem_perfil img:hover {
+            opacity: 0.5; 
+            border: #333 solid; 
+        }
+
+        .principal {
+            grid-column-start: 4;
+            grid-column-end: 12;
+            padding-left: 15px;
+            padding-right: 15px;
+            text-align: justify; 
+        }
+
+        footer {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: #000000; 
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 20px; /* Espaçamento interno do footer */
+            position: relative;
+            bottom: 0; /* Posiciona o footer no fundo */
+            width: 100%; /* Faz o footer ocupar toda a largura */
+        }
+
+        ul {
+            list-style-type: none; 
+            color: #000000;
+        }
+
+        a,
+        a:link {
+            text-decoration: none; /* Remove o sublinhado dos links */
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: large;
+            font-weight: bold;
+            color: black;
+            padding: 9px 20px; /* Espaçamento interno dos links */
+            border: thick double black; 
+        }
+
+        .font {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-left: 20px; 
+        }
+
+        li {
+            float: left;
+        }
+
+        a:hover {
+            background-color: #424242; 
+            color: white; 
+        }
+
+        /* Estilos para o formulário de contato */
+        .contact-form {
+            background: #ffffff; 
+            padding: 30px; /* Espaçamento interno do formulário */
+            border-radius: 10px; 
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra ao redor do formulário */
+            width: 100%;
+            max-width: 500px; 
+            margin: 4; 
+        }
+
+        .contact-form h2 {
+            margin-bottom: 15px; /* Espaçamento abaixo do título */
+            font-size: 24px;
+            color: #333; 
+        }
+
+        .contact-form label {
+            font-size: 14px; 
+            margin-bottom: 5px; /* Espaçamento abaixo dos rótulos */
+            display: block; /* Faz os rótulos ocuparem toda a linha */
+            color: #666; 
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%; 
+            padding: 10px; /* Espaçamento interno dos campos de entrada */
+            margin-bottom: 15px; /* Espaçamento abaixo dos campos de entrada */
+            border: 1px solid #ddd; /* Borda dos campos de entrada */
+            border-radius: 5px; /* Bordas arredondadas dos campos de entrada */
+            font-size: 16px;
+        }
+
+        .contact-form textarea {
+            height: 200px; 
+            resize: vertical; /* Permite redimensionar verticalmente */
+        }
+
+        .contact-form button {
+            display: inline-block; /* Faz o botão se ajustar ao tamanho do texto */
+            background: #ff6b6b; 
+            color: #fff;
+            padding: 10px 20px; 
+            font-size: 16px;
+            border: none; 
+            border-radius: 5px; /* Bordas arredondadas do botão */
+            cursor: pointer;
+            transition: background 0.3s ease; /* Transição suave para a cor de fundo do botão */
+        }
+
+        .contact-form button:hover {
+            background: #ff3b3b; 
+        }
+
+        /* media query para dispositivos móveis */
+        @media only screen and (max-width: 767px) {
+            .wrapper {
+                grid-column-start: 1;
+                grid-column-end: 1; /* Faz a wrapper ocupar a largura total em dispositivos móveis */
+            }
+
+            .imagem_perfil {
+                grid-column-start: 1;
+                grid-column-end: 1; /* Faz a imagem ocupar a largura total em dispositivos móveis */
+            }
+
+            .principal {
+                grid-column-start: 1;
+                grid-column-end: 1; /* Faz a seção principal ocupar a largura total em dispositivos móveis */
+            }
+
+            .menu {
+                grid-column-start: 1;
+                grid-column-end: 12;
+                text-align: center;
+                display: flex; /* Usa flexbox para o menu */
+                flex-direction: column; /* Organiza os itens do menu em coluna */
+                gap: 10px;
+            }
+
+            .menu ul {
+                padding: 0; /* Remove o padding da lista no menu */
+            }
+
+            .menu li {
+                float: none; /* Remove o float dos itens da lista */
+            }
+
+            .menu a {
+                display: block; /* Faz os links ocuparem a largura completa */
+                padding: 15px 0; 
+            }
+
+            .contact-form-container {
+                padding: 10px; /* Adiciona espaçamento ao redor do formulário */
+            }
+
+            .contact-form {
+                max-width: 100%; /* Garante que o formulário ocupe toda a largura disponível */
+                padding: 20px; /* Reduz o padding para se ajustar melhor em telas menores */
+            }
+
+            .contact-form h2 {
+                font-size: 20px; /* Reduz o tamanho da fonte do título para dispositivos móveis */
+            }
+
+            .contact-form label {
+                font-size: 14px; /* Mantém o tamanho da fonte das labels legível em telas menores */
+            }
+
+            .contact-form input[type="text"],
+            .contact-form input[type="email"],
+            .contact-form textarea {
+                font-size: 14px; 
+                padding: 8px; /* Reduz o padding dos campos para uma aparência mais compacta */
+            }
+
+            .contact-form button {
+                padding: 8px 16px; 
+                font-size: 14px; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container">
+        <h1 style="color: rgb(255, 255, 255); text-align: center;"></h1>
+        <br>
+    </header>
+    <nav class="container menu">
+        <ul>
+            <li><a href="index.html">Sobre Mim</a></li>
+            <li><a href="profissional.html">Profissional</a></li>
+            <li><a href="educacional.html">Educacional</a></li>
+            <li><a href="pets.html">Cuteness</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    <div class="container wrapper">
+        <aside class="imagem_perfil">
+            <img src="imagens/coffeegirl.png" alt="Imagem de Perfil"> 
+            <div class="font">
+                <p><strong> Profissão: </strong> Back-End Developer</p>
+                <p><strong> Idade: </strong> 27 anos</p>
+                <p><strong>Nascimento: </strong> 17/07/1997</p>
+                <p><strong>Curso: </strong> Engenharia de Software</p>
+            </div>
+        </aside>
+        <section class="principal font">
+            <br><br><br>
+            <div class="contact-form-container">
+                <form class="contact-form">
+                  <h2>Entre em Contato: </h2>
+                  <label for="name">Nome</label>
+                  <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+              
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="Seu email" required>
+              
+                  <label for="message">Mensagem</label>
+                  <textarea id="message" name="message" placeholder="Sua Mensagem" required></textarea>
+              
+                  <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <br><br><br> 
+        </section>
+    </div>
+    <footer class="container">
+        <h1> Obrigada pela Visita! </h1>
+    </footer>
+    </div> 
+</body>
+
+</html>

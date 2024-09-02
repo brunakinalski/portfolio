@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruna Kinalski Lima</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            display: grid; 
+        }
+
+        header {
+            grid-column-start: 1;
+            grid-column-end: 12; 
+            background-color: #000000; 
+        }
+
+        .menu {
+            grid-column-start: 6;
+            grid-column-end: 12;
+            justify-content: center; 
+            gap: 20px; 
+        }
+
+        .imagem_perfil {
+            grid-column-start: 1;
+            grid-column-end: 3; 
+        }
+
+        .imagem_perfil img {
+            width: 100%; /* Ajusta a largura da imagem para o container */
+            height: auto; /* Mantém a proporção da imagem */
+            max-width: 300px; /* Define um tamanho máximo para a imagem */
+            display: block;
+            border-radius: 50%; 
+            opacity: 0.8; 
+            border: #000000 dotted;
+        }
+
+        .imagem_perfil img:hover {
+            opacity: 0.5; 
+            border: #333 solid; 
+        }
+
+        .principal {
+            grid-column-start: 4;
+            grid-column-end: 12; 
+            padding-left: 15px;
+            padding-right: 15px; 
+            text-align: justify; 
+        }
+
+        footer {
+            grid-column-start: 1;
+            grid-column-end: 12; /* Faz o footer ocupar todas as colunas do grid */
+            background-color: #000000; 
+            color: rgb(255, 255, 255);
+            text-align: center; 
+            padding: 20px; 
+            position: relative;
+            bottom: 0; /* Posiciona o footer na parte inferior */
+            width: 100%; /* Faz o footer ocupar toda a largura */
+        }
+
+        ul {
+            list-style-type: none;
+            color: #000000;
+        }
+
+        a,
+        a:link {
+            text-decoration: none; /* Remove o sublinhado dos links */
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: large;
+            font-weight: bold;
+            color: black;
+            padding: 9px 20px; 
+            border: thick double black; 
+        }
+
+        .font {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-left: 20px; 
+        }
+
+        li {
+            float: left; /* Faz com que os itens da lista fiquem lado a lado */
+        }
+
+        a:hover {
+            background-color: #424242; 
+            color: white; 
+        }
+
+        .skills-section {
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 20px; 
+            margin-top: 20px; 
+        }
+
+        .skill-card {
+            background-color: #ffffff; 
+            border: 2px solid #ddd; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: calc(25% - 30px); /* Define a largura dos cartões */
+            text-align: center; 
+        }
+
+        .skill-card img {
+            width: 50px;
+            height: 50px; 
+            margin-bottom: 10px; /* Espaçamento abaixo dos ícones */
+        }
+
+        .skill-card h3 {
+            margin: 0; 
+            color: #333; 
+        }
+
+        .skill-card p {
+            color: #666; 
+        }
+
+        /* Estilo para a seção de idiomas */
+        .language-level {
+            background-color: #969393; 
+            border-radius: 5px;
+            overflow: hidden; /* Garante que o conteúdo extra não transborde */
+            height: 30px;
+            width: 30%; 
+        }
+
+        .level-bar {
+            background-color: #414141; 
+            height: 100%; /* Faz a barra ocupar toda a altura do container */
+            text-align: right; 
+            padding-right: 10px;
+            box-sizing: border-box;
+            color: #fff; 
+            line-height: 30px; /* Alinha verticalmente o texto */
+            font-size: 10px; /* Tamanho da fonte do texto dentro da barra */
+            border-radius: 5px; 
+        }
+
+        /* Media query para dispositivos móveis */
+        @media only screen and (max-width: 767px) {
+            .wrapper {
+                grid-column-start: 1;
+                grid-column-end: 1; 
+            }
+
+            .imagem_perfil {
+                grid-column-start: 1;
+                grid-column-end: 1; 
+            }
+
+            .principal {
+                grid-column-start: 1;
+                grid-column-end: 1; 
+            }
+
+            .container {
+                grid-template-columns: 1fr; 
+            }
+
+            .skill-card {
+                width: calc(100% - 20px); /* Faz os cartões ocuparem a largura completa em dispositivos móveis */
+            }
+
+            .menu {
+                grid-column-start: 1;
+                grid-column-end: 12; 
+                text-align: center; 
+                display: flex;
+                flex-direction: column; /* Torna o menu vertical em dispositivos móveis */
+                gap: 10px; 
+            }
+
+            .menu ul {
+                padding: 0; 
+            }
+
+            .menu li {
+                float: none; 
+            }
+
+            .menu a {
+                display: block; 
+                padding: 15px 0; 
+            }
+
+            .language-level {
+                width: 100%; /* Faz a barra de idioma ocupar toda a largura  */
+                height: 25px; /* Ajusta a altura da barra para dispositivos menores */
+            }
+
+            .level-bar {
+                font-size: 12px; /* Aumenta o tamanho da fonte para legibilidade */
+                line-height: 25px; /* Ajusta a altura da linha para centralizar o texto */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <header class="container">
+        <h1 style="color: rgb(255, 255, 255); text-align: center;"></h1>
+        <br>
+    </header>
+
+  
+    <nav class="container menu">
+        <ul>
+           
+            <li><a href="index.html">Sobre Mim</a></li>
+            <li><a href="profissional.html">Profissional</a></li>
+            <li><a href="educacional.html">Educacional</a></li>
+            <li><a href="pets.html">Cuteness</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+   
+    <div class="container wrapper">
+       
+        <aside class="imagem_perfil">
+            <img src="imagens/jobgirl.png">
+            <div class="font">
+               
+                <p><strong> Profissão: </strong> Back-End Developer</p>
+                <p><strong> Idade: </strong> 27 anos</p>
+                <p><strong>Nascimento: </strong> 17/07/1997</p>
+                <p><strong>Curso: </strong> Engenharia de Software</p>
+            </div>
+        </aside>
+
+       
+        <section class="principal font">
+            <h1>Informações Acadêmicas, Idiomas e Cursos</h1>
+
+            <!-- Seção de formação acadêmica -->
+            <h4>FORMAÇÃO ACADÊMICA:</h4>
+            <p><strong>Curso: </strong> Bacharelado em Engenharia de Software EAD</p>
+            <p><strong>Instituição:</strong> Uninter - Sede Panambi</p>
+            <p><strong>Período:</strong> Início (Junho/2023) - Conclusão (Junho/2027)</p>
+            <br>
+
+            <!-- Seção de idiomas -->
+            <div class="languages-section">
+                <h4>IDIOMAS:</h4>
+              
+                <div class="language-item">
+                    <h4>Coreano</h4>
+                    <div class="language-level">
+                        <div class="level-bar" style="width: 30%;">Iniciante</div>
+                    </div>
+                </div>
+              
+                <div class="language-item">
+                    <h4>Inglês</h4>
+                    <div class="language-level">
+                        <div class="level-bar" style="width: 95%;">Fluente</div>
+                    </div>
+                </div>
+                
+                <div class="language-item">
+                    <h4>Português</h4>
+                    <div class="language-level">
+                        <div class="level-bar" style="width: 100%;">Nativo</div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <!-- Seção de cursos -->
+            <h4>CURSOS:</h4>
+            <div class="skills-section">
+               
+                <div class="skill-card">
+                    <h3>Flutter & Dart</h3>
+                    <h4>Flutter & Dart - The Complete Guide [2024 Edition]</h4>
+                    <p>Curso completo para Flutter e Dart (aplicativos nativos para iOS e Android)</p>
+                    <p>Carga Horária: 45h</p>
+                    <p>Plataforma: Udemy</p>
+                </div>
+
+               
+                <div class="skill-card">
+                    <h3>Java</h3>
+                    <h4>Java - Programação Orientada a Objetos + Projetos</h4>
+                    <p>Curso básico sobre Java e OO, UML, JDBC, JavaFX, Spring Boot, JPA, Hibernate, MySQL, MongoDB.</p>
+                    <p>Carga Horária: 54h</p>
+                    <p>Plataforma: Udemy</p>
+                </div>
+
+               
+                <div class="skill-card">
+                    <h3>SQL</h3>
+                    <h4>Introdução a SQL: Consulta e gerenciamento de dados</h4>
+                    <p>Curso básico sobre como usar SQL para armazenar, consultar e manipular dados.</p>
+                    <p>Carga Horária: -</p>
+                    <p>Plataforma: Khan Academy</p>
+                </div>
+
+                
+                <div class="skill-card">
+                    <h3>API HTTP</h3>
+                    <h4>Java: consumindo API, gravando arquivos e lidando com erros</h4>
+                    <p>Curso básico sobre como consumir uma API HTTP em Java, receber e converter informações de uma API para objetos Java, manipular dados no formato JSON, utilizar a biblioteca Gson para conversão de objetos Java em JSON e vice-versa, fazer uso das classes do pacote java.io para manipulação de arquivos</p>
+                    <p>Carga Horária: 10h</p>
+                    <p>Plataforma: Alura</p>
+                </div>
+
+              
+                <div class="skill-card">
+                    <h3>HTML & CSS</h3>
+                    <h4>HTML e CSS: ambientes de desenvolvimento, estrutura de arquivos e tags</h4>
+                    <p>Download e instalação do ambiente para o desenvolvimento de páginas HTML e CSS, como estudar uma nova tecnologia com base na documentação, criar um projeto com HTML e CSS do zero, estilizações com CSS, entendimento da importância do HTML semântico e boas práticas de desenvolvimento</p>
+                    <p>Carga Horária: 8h</p>
+                    <p>Plataforma: Alura</p>
+                    <p>-Em Andamento-</p>
+                </div>
+
+               
+                <div class="skill-card">
+                    <h3>INGLÊS</h3>
+                    <h4>CCAA & Senac</h4>
+                    <p>Senac PRONATEC (2013) 160h - Basic Level</p>
+                    <p>CCAA (2015 - 2018) 4 anos - Advanced Level</p>
+                    <p>CCAA (2018) - English Teacher Training Program</p>
+                    <p>TOEFL ITP (2018)</p>
+                </div>
+               
+            </div>
+            <br><br><br>
+        </section>
+    </div>
+
+  
+    <footer class="container">
+        <h1>Obrigada pela Visita!</h1>
+    </footer>
+</body>
+
+
+</html>
